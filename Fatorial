@@ -1,0 +1,7 @@
+n1 = int(input('Digite um numero: '))
+c = n1
+f = 1
+while c > 0:
+    f *= c
+    c -= 1
+print('{}'.format(f))
