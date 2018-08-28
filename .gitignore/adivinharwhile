@@ -1,0 +1,13 @@
+from random import randint                          # FUNÇÃO PARA CRIAR O SORTEIO DE NUMEROS
+from time import sleep                              # FUNÇÃO SLEEP DA UM TEMPO ENTRE UM COMANDO E OUTRO
+n = randint(0, 10)
+print('Vou pensar em um número de 0 a 10 tente acertar!!!')
+sleep(3)
+print('VALENDO')
+j = int(input('Digite o Valor que o computador pensou: '))
+cont = 1
+
+while j != n:                                           #ENQUANTO O USUARIO NÃO ACERTAR O NÚMERO QUE O COMPUTADOR RANDOMIZOU
+    j = int(input('Você errou tente mais uma vez: '))   # O CODIGO FICARÁ RODANDO A MSG PARA TENTAR NOVAMENTE
+    cont += 1   # no final o contador dirá em quantas tentativas o usuario acertou
+print('Você acertou em {} tentativas'.format(cont))
