@@ -1,0 +1,26 @@
+tot = 0
+h = 0
+barato = 0
+while True:
+    nome = str(input('Qual o nome do produto: '))
+    preco = float(input('Qual o valor: R$ '))
+    tot = tot + preco
+    if preco == barato:
+        barato = prod = preco
+    else:
+        if preco > barato:     # analisa o preco do produto e armazena o mais barato pelo nome preço
+            barato = preco
+            prod = nome
+    if preco > 1000.00:
+        h += 1
+    cont = ' '
+    while cont not in 'SN':
+        cont = str(input('Deseja continuar: ')).strip().upper()[0]
+    if cont == 'N':
+        break
+print('''
+Total da compra R$ {:.2f}
+Produtos maiores que R$ 1.000,00 {}
+Produto mais caro {}'''.format(tot, h, prod))
+
+# ELE MOSTRA O TOTAL DA COMPRA QUANTOS PRODUTOS MAIORES QUE MIL REAIS E QUAL O NOME DO PRODUTO MAIS CARO
